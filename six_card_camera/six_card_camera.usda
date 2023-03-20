@@ -1,0 +1,51 @@
+#usda 1.0
+
+def Xform "World"
+{
+    def Cube "model"
+    {
+    }
+
+    def Camera "front_camera"
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        double3 xformOp:translate = (101, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+    }
+
+    def Camera "back_camera"
+    {
+        quatf xformOp:orient = (0.70710677, 0, -0.70710677, 0)
+        double3 xformOp:translate = (-101, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+    }
+
+    def Camera "left_camera"
+    {
+        quatf xformOp:orient = (0.70710677, 0.70710677, 0, 0)
+        double3 xformOp:translate = (1, -100, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+    }
+
+    def Camera "right_camera"
+    {
+        quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
+        double3 xformOp:translate = (-1, 100, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+    }
+
+    def Camera "bottom_camera"
+    {
+        quatf xformOp:orient = (6.123234e-17, 0, 1, 0)
+        double3 xformOp:translate = (1, 0, -100)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+    }
+
+    def Camera "top_camera"
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:translate = (-1, 0, 100)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+    }
+}
+
